@@ -8,24 +8,20 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class Database {
-    private static final String URL;
-    private static final String USER;
-    private static final String PASSWORD;
 
-    static {
+    public static Connection getConnection() throws SQLException{
+
         Properties properties = new Properties();
-        try{
+        try {
             properties.load(new FileInputStream("src/main/resources/connection.properties"));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        URL = properties.getProperty("url");
-        USER = properties.getProperty("user");
-        PASSWORD = properties.getProperty("password");
-    }
+        String URL = properties.getProperty("url");
+        String USER = properties.getProperty("user");
+        String PASSWORD = properties.getProperty("password");
 
-    public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL,USER,PASSWORD);
     }
 }

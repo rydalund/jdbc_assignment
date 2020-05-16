@@ -12,7 +12,7 @@ public class App
         //CityDaoJDBC testImpl = new CityDaoJDBC();
         //System.out.println(testImpl.findById(3046).toString());
         //System.out.println(testImpl.findByCode("SWE").toString());
-        //System.out.println(testImpl.findByName("Malmö").toString());
+        //System.out.println(testImpl.findByName("Uppsala").toString());
         //System.out.println(testImpl.findAll().toArray().length);
         //City Lessebo = new City("Lessebo", "SWE", "Kronobergs län", 10);
         //testImpl.add(Lessebo);
