@@ -44,11 +44,12 @@ public class CityDaoJDBC implements CityDao{
 
     private City createCityFromResultSet(ResultSet resultSet) throws SQLException {
         return new City(
-                resultSet.getInt("ID"),
-                resultSet.getString("Name"),
-                resultSet.getString("CountryCode"),
-                resultSet.getString("District"),
-                resultSet.getInt("Population"));
+            resultSet.getInt("ID"),
+            resultSet.getString("Name"),
+            resultSet.getString("CountryCode"),
+            resultSet.getString("District"),
+            resultSet.getInt("Population")
+        );
     }
 
     @Override
